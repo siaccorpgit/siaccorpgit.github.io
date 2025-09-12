@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 (function() {
   // Check if 'opt-valign.css' is loaded
   const isCssLoaded = Array.from(document.styleSheets).some(sheet => {
-    return sheet.href && sheet.href.includes('opt-valign.css');
+    return sheet.href && sheet.href.includes('https://siaccorpgit.github.io/dev/opt-valign.css');
   });
 
   if (!isCssLoaded) return;
