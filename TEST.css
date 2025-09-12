@@ -7,6 +7,7 @@ td.ftd_title, td.ftd_cont, td.ftd_comment {
 table {
     border:none !important;
 }
+/*TEST*/
 #formbody > table {
     display:block;
     background:pink;
