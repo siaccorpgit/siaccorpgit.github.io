@@ -1,8 +1,7 @@
 td.ftd_title, td.ftd_cont, td.ftd_comment {
-    display: block;
     background:white !important;
     border:none;
-    width:50vw !important;
+    width: 100%;
 }
 table {
     border:none !important;
@@ -10,12 +9,13 @@ table {
 /*TEST*/
 #formbody > table {
     display:block;
-    background:pink;
 }
 
 td.ftd_title {
     font-size:1.2em;
     padding:0 !important;
+    border-bottom:none !important;
+    border-right:none !important;
 }
 td.ftd_cont {
     padding:0 !important;
