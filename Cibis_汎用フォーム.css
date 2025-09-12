@@ -1,0 +1,12 @@
+div#documentInput {
+    background-image:url("https://www.cibis.co.jp/img/siac_cibis_logo.png");
+    background-color:rgba(255,255,255,0.95);
+    background-blend-mode: lighten;
+}
+/* div.documentHeaderInfo {
+    background: #f0eef0;
+    border-radius: 10px;
+    border: 1px dotted #aaa;
+    padding: 10px;
+    width:50vw !important;
+} */

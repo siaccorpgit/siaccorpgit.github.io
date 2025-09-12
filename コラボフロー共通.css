@@ -1,0 +1,62 @@
+#formbase {
+    width:80% !important;
+    min-width:1070px;
+}
+
+div.documentHeaderInfo {
+    background: #f0eef0;
+    border-radius: 10px;
+    border: 1px dotted #aaa;
+    padding: 10px;
+    width:calc(96vw - 609.7px);
+}
+div#documentInput table:nth-of-type(1) div.title{
+    font-size:2.0rem;
+    margin-bottom:16px;
+}
+
+/*テーブルセル*/
+td.ftd_title {
+    border-right:solid 1px #aaa;
+}
+td.ftd_title,td.ftd_cont,td.ftd_comment,td.ftd_labelcont {
+    padding:10px 10px !important;
+}
+td.ftd_comment {
+    border-left :solid 1px #F4F4F4;
+}
+
+/*「必須」*/
+td.ftd_title span {
+ position:relative;
+ font-size:0% !important;
+}
+td.ftd_title span::after {
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    content:"必須";
+    font-size:11px;
+    width: 30px;
+    padding:3px 3px;
+    color:white;
+    background:red;
+    border-radius: 5px;
+    margin-left:10px;
+    border:solid 1px red;
+}
+
+/*プルダウン*/
+select.fidSelect {
+    padding:0 10px;
+}
+/*チェックボックス*/
+td.ftd_cont[title="check"] {
+    
+}
+td.ftd_cont[title="check"] div.fcont {
+    width:20px !important;
+}
+td.ftd_cont[title="check"] + td.ftd_comment {
+    vertical-align: middle;
+}

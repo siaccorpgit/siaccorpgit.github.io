@@ -1,0 +1,59 @@
+td.ftd_title, td.ftd_cont, td.ftd_comment {
+    display: block;
+    background:white !important;
+    border:none;
+    width:50vw !important;
+}
+table {
+    border:none !important;
+}
+#formbody > table {
+    display:block;
+    background:pink;
+}
+/* #formbody > table tbody tr td table tbody tr {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#formbody > table tbody tr td table tbody tr td:nth-child(odd) {
+    grid-column:1;
+}
+#formbody > table tbody tr td table tbody tr td:nth-child(even) {
+    grid-column:2;
+} */
+td.ftd_title {
+    font-size:1.2em;
+    padding:0 !important;
+}
+td.ftd_cont {
+    padding:0 !important;
+}
+td.ftd_comment {
+    padding:0 5px 10px!important;
+    color:gray;
+}
+input.fidText,.fidMasterImport,.fidDate {
+    height:30px;
+}
+.fidMasterImport {
+    width:25vw !important;
+}
+.fidDate {
+    width:10vw !important;
+}
+input.fidText,textarea.fidTextArea{
+    width:30vw !important;
+}
+input.fidText,textarea.fidTextArea,.fidMasterImport,.fidDate,select.fidSelect {
+    min-width: 200px;
+    border-radius: 10px 10px;
+    padding:5px 5px;
+}
+
+.template_information {
+    width:20vw;
+    height:20vh;
+    left:10px;
+    bottom:10px;
+}
