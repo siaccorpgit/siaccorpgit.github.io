@@ -11,17 +11,7 @@ table {
     display:block;
     background:pink;
 }
-/* #formbody > table tbody tr td table tbody tr {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-}
 
-#formbody > table tbody tr td table tbody tr td:nth-child(odd) {
-    grid-column:1;
-}
-#formbody > table tbody tr td table tbody tr td:nth-child(even) {
-    grid-column:2;
-} */
 td.ftd_title {
     font-size:1.2em;
     padding:0 !important;
