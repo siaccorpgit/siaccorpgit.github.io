@@ -17,3 +17,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+(function() {
+  // Check if 'opt-valign.css' is loaded
+  const isCssLoaded = Array.from(document.styleSheets).some(sheet => {
+    return sheet.href && sheet.href.includes('opt-valign.css');
+  });
+
+  if (!isCssLoaded) return;
+
+  // Get all rows in the document
+  const rows = document.querySelectorAll('tr');
+
+  rows.forEach(row => {
+    const fcont = row.querySelector('.fcont');
+    const fcomment = row.querySelector('.fcomment');
+
+    if (fcont && fcomment) {
+      // Clone the fcomment element
+      const newFcomment = fcomment.cloneNode(true);
+
+      // Insert the cloned fcomment after fcont
+      fcont.parentNode.insertBefore(newFcomment, fcont.nextSibling);
+
+      // Remove the original fcomment
+      fcomment.parentNode.removeChild(fcomment);
+    }
+  });
+})();
