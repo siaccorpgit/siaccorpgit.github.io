@@ -4,7 +4,7 @@
 }
 @media screen and (max-width: 1540px) {
     #formbase {
-        margin-left: 180px;
+        margin-left: 225px;
     }
 }
 div.documentHeaderInfo {
@@ -12,8 +12,8 @@ div.documentHeaderInfo {
     border-radius: 10px;
     border: 1px dotted #aaa;
     padding: 10px;
-    width:13vw;
-    min-width:180px;
+    width:14vw;
+    min-width:210px;
     height:300px;
     position:fixed;
     left:5px;
@@ -22,7 +22,8 @@ div.documentHeaderInfo {
 
 
 div#documentInput table:nth-of-type(1) div.title{
-    font-size:2.0rem;
+    font-size:1.6rem;
+    font-weight:bold;
     margin-bottom:16px;
 }
 
