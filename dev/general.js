@@ -16,9 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
       tr.classList.add('template_information');
     }
   });
-});
 
-(function() {
+  /*縦揃えのみコメント位置移動処理*/ 
   // Check if 'opt-valign.css' is loaded
   const isCssLoaded = Array.from(document.styleSheets).some(sheet => {
     return sheet.href && sheet.href.includes('https://siaccorpgit.github.io/dev/opt-valign.css');
@@ -44,4 +43,4 @@ document.addEventListener('DOMContentLoaded', () => {
       fcomment.parentNode.removeChild(fcomment);
     }
   });
-})();
+});
