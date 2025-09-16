@@ -52,5 +52,8 @@ input.fidText,textarea.fidTextArea,.fidMasterImport,.fidDate,select.fidSelect {
 }
 
 .row-tables {
-    margin-top:10px;
+    margin-top:25px;
+}
+.fcont {
+    min-width:280px;
 }
