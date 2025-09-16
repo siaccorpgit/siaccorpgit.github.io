@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('tr').forEach(tr => {
+  document.querySelectorAll('tr').forEach((tr, index, rows) => {
     const titles = tr.querySelectorAll('td.ftd_title');
     const fixedLabels = ['社員番号', '氏名', 'メールアドレス'];
 
@@ -11,9 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         matchCount++;
       }
     });
-    // すべてのラベルが一致した場合に class を追加
-    if (matchCount === fixedLabels.length) {
-      tr.classList.add('template_information');
+
+    // すべてのラベルが一致した場合に、直前の tr に class を追加
+    if (matchCount === fixedLabels.length && index > 0) {
+      rows[index - 1].classList.add('template_information');
     }
   });
 
