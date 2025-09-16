@@ -50,3 +50,7 @@ input.fidText,textarea.fidTextArea,.fidMasterImport,.fidDate,select.fidSelect {
 .template_information > td:nth-of-type(1) {
     padding-left:20px;
 }
+
+.row-tables {
+    margin-top:10px;
+}
