@@ -18,6 +18,7 @@ div.documentHeaderInfo {
     position:fixed;
     left:5px;
     margin-top:-20px;
+    z-index:999;
 }
 
 
@@ -30,6 +31,7 @@ div#documentInput table:nth-of-type(1) div.title{
 /*テーブルセル*/
 td.ftd_title {
     border-right:solid 1px #aaa;
+    height:30px;
 }
 td.ftd_title,td.ftd_cont,td.ftd_comment,td.ftd_labelcont {
     padding:10px 10px !important;
@@ -45,7 +47,7 @@ td.ftd_title span {
 }
 td.ftd_title span::after {
     text-align: center;
-    vertical-align: middle;
+    vertical-align: inherit;
     display: inline-block;
     content:"必須";
     font-size:11px;

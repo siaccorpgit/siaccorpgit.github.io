@@ -44,7 +44,6 @@ input.fidText,textarea.fidTextArea,.fidMasterImport,.fidDate,select.fidSelect {
 
 .template_information {
     width:20vw;
-    height:20vh;
-    left:10px;
-    bottom:10px;
+    border-left:#BF0562 10px solid;
+    border-bottom:#79003B 1px solid;
 }

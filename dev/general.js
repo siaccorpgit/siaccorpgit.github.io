@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const isCssLoaded = Array.from(document.styleSheets).some(sheet => {
     return sheet.href && sheet.href.includes('https://siaccorpgit.github.io/dev/opt-valign.css');
   });
-  console.log(isCssLoaded);
   if (!isCssLoaded) return;
 
   // Get all rows in the document
