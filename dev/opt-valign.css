@@ -6,7 +6,9 @@ td.ftd_title, td.ftd_cont, td.ftd_comment {
 table {
     border:none !important;
 }
-/*TEST*/
+#formbody {
+    margin-top: -30px;
+}
 #formbody > table {
     display:block;
 }
@@ -56,4 +58,5 @@ input.fidText,textarea.fidTextArea,.fidMasterImport,.fidDate,select.fidSelect {
 }
 .fcont {
     min-width:280px;
+    min-height:30px;
 }
