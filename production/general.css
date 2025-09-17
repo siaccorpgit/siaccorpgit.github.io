@@ -55,10 +55,10 @@ td.ftd_title span::after {
     width: 30px;
     padding:3px 3px;
     color:white;
-    background:red;
+    background:#BF0562;
     border-radius: 5px;
     margin-left:10px;
-    border:solid 1px red;
+    border:solid 1px #BF0562ed;
 }
 
 /*プルダウン*/
