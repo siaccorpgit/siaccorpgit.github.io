@@ -42,6 +42,7 @@ input.fidText,textarea.fidTextArea,.fidMasterImport,.fidDate,select.fidSelect {
     min-width: 200px;
     border-radius: 10px 10px;
     padding:5px 5px;
+    min-height:30px;
 }
 
 .template_information {
