@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   addTemplateInformationClass();
   addRowTablesClass();
   moveFcommentIfCssLoaded();
-  applyTitleToPlaceholder(); // ← 追加した関数を呼び出し
+  applyTitleToPlaceholder(); // ← 追加した関数
 });
 
 // 1. 指定ラベルが揃ったときに直前の tr にクラスを追加
@@ -61,14 +61,20 @@ function moveFcommentIfCssLoaded() {
   });
 }
 
-// 4. td.ftd_cont の title を input の placeholder に設定
+// 4. td.ftd_cont の title を input や textarea の placeholder に設定
 function applyTitleToPlaceholder() {
   document.querySelectorAll('td.ftd_cont').forEach(td => {
     const titleText = td.getAttribute('title');
-    const input = td.querySelector('input');
+    if (!titleText) return;
 
-    if (titleText && input) {
+    // input または textarea を探す
+    const input = td.querySelector('input');
+    const textarea = td.querySelector('textarea');
+
+    if (input) {
       input.setAttribute('placeholder', titleText);
+    } else if (textarea) {
+      textarea.setAttribute('placeholder', titleText);
     }
   });
 }
