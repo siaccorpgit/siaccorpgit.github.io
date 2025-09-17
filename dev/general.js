@@ -61,9 +61,9 @@ function moveFcommentIfCssLoaded() {
   });
 }
 
-// 4. td.ftd_cont の title を input や textarea の placeholder に設定
+// 4. td.ftd_cont または td.ftd_verticalcont の title を input/textarea の placeholder に設定
 function applyTitleToPlaceholder() {
-  document.querySelectorAll('td.ftd_cont').forEach(td => {
+  document.querySelectorAll('td.ftd_cont, td.ftd_verticalcont').forEach(td => {
     const titleText = td.getAttribute('title');
     if (!titleText) return;
 
