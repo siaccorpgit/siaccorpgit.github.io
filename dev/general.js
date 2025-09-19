@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   moveFcommentIfCssLoaded();
   applyTitleToPlaceholder();
   applyNoMarginTopIfUserStampExists();
+  convertFcommentToLabelIfStructureMatches();
 });
 
 // 1. 指定ラベルが揃ったときに直前の tr にクラスを追加
