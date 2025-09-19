@@ -90,6 +90,13 @@ function applyNoMarginTopIfUserStampExists() {
   if (userStampExists && formBody) {
     formBody.classList.add('no-margintop');
   }
+
+  if (userStampExists) {
+    document.querySelectorAll('.fcomment').forEach(el => {
+      el.style.display = 'none';
+    });
+  }
+
 }
 
 // 5.チェックボックス用ラベル作成
