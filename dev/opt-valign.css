@@ -34,14 +34,11 @@ td.ftd_comment {
 input.fidText,.fidMasterImport,.fidDate {
     height:30px;
 }
-.fidMasterImport {
-    width:25vw !important;
-}
 .fidDate {
     width:10vw !important;
 }
 input.fidText,textarea.fidTextArea{
-    width:30vw !important;
+    
 }
 input.fidText,textarea.fidTextArea,.fidMasterImport,.fidDate,select.fidSelect {
     min-width: 200px;
