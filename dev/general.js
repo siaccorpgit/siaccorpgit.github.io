@@ -91,3 +91,33 @@ function applyNoMarginTopIfUserStampExists() {
   }
 }
 
+// 5.チェックボックス用ラベル作成
+function convertFcommentToLabelIfStructureMatches() {
+  document.querySelectorAll('tr').forEach(row => {
+    // .fcont または .fcont_dsp を取得
+    const fcont = row.querySelector('.fcont, .fcont_dsp');
+    const fcomment = row.querySelector('.fcomment');
+
+    // 条件：fcontがあり、fcommentがあり、fcont内にチェックボックスがある
+    if (fcont && fcomment) {
+      const checkbox = fcont.querySelector('input[type="checkbox"]');
+      const commentText = fcomment.textContent.trim();
+
+      if (checkbox && commentText) {
+        // label要素を作成
+        const label = document.createElement('label');
+        label.setAttribute('for', checkbox.id);
+        label.textContent = commentText;
+        label.style.marginLeft = '6px';
+        label.style.fontSize = '13px';
+        label.style.lineHeight = '23px';
+
+        // fcont内にラベルを追加
+        fcont.appendChild(label);
+
+        // 元のfcommentを削除
+        fcomment.remove();
+      }
+    }
+  });
+}
