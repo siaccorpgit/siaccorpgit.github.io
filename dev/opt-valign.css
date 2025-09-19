@@ -121,7 +121,7 @@ input[type="checkbox"] + label {
   font-size: 1em;
 }
 
-/* チェックボックスの見た目を作成 */
+/* チェックボックスの見た目 */
 input[type="checkbox"] + label::before {
   content: "";
   position: absolute;
@@ -135,10 +135,21 @@ input[type="checkbox"] + label::before {
   transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 }
 
-/* チェックされたときの見た目 */
+/* チェックされたときの背景色と枠線色 */
 input[type="checkbox"]:checked + label::before {
   background-color: #BF0562ed;
   border-color: #BF0562ed;
+}
+
+/* チェックマークのアイコン */
+input[type="checkbox"]:checked + label::after {
+  content: "✔";
+  position: absolute;
+  left: 3px;
+  top: 0px;
+  font-size: 14px;
+  color: white;
+  transition: opacity 0.1s ease-in-out;
 }
 
 /* チェックされたときのラベル文字サイズ変更 */
