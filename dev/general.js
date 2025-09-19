@@ -50,7 +50,7 @@ function moveFcommentIfCssLoaded() {
   if (!isCssLoaded) return;
 
   document.querySelectorAll('tr').forEach(row => {
-    const fcont = row.querySelector('.fcont');
+    const fcont = row.querySelector('.fcont, .fcont_dsp'); // 両方のクラスに対応
     const fcomment = row.querySelector('.fcomment');
 
     if (fcont && fcomment) {
@@ -60,6 +60,7 @@ function moveFcommentIfCssLoaded() {
     }
   });
 }
+
 
 // 4. td.ftd_cont または td.ftd_verticalcont の title を input/textarea の placeholder に設定
 function applyTitleToPlaceholder() {
