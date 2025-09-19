@@ -9,6 +9,9 @@ table {
 #formbody {
     margin-top: -30px;
 }
+#formbody.no-margintop {
+    margin-top: 0;
+}
 #formbody > table {
     display:block;
 }

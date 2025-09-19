@@ -79,3 +79,14 @@ function applyTitleToPlaceholder() {
     }
   });
 }
+
+// 4.承認画面用のクラス付与
+function applyNoMarginTopIfUserStampExists() {
+  const userStampExists = document.querySelector('.userStampBlock') !== null;
+  const formBody = document.getElementById('formbody');
+
+  if (userStampExists && formBody) {
+    formBody.classList.add('no-margintop');
+  }
+}
+
