@@ -89,8 +89,10 @@ input[type="radio"] + label::before {
   border-radius: 50%;
   border: 2px solid #BF0562ed;
   background-color: white;
+  transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 }
 
 input[type="radio"]:checked + label::before {
   background-color: #BF0562ed;
+  border-color: #BF0562ed;
 }
