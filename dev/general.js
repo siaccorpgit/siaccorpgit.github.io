@@ -51,7 +51,7 @@ function moveFcommentIfCssLoaded() {
   if (!isCssLoaded) return;
 
   document.querySelectorAll('tr').forEach(row => {
-    const fcont = row.querySelector('.fcont, .fcont_dsp'); // 両方のクラスに対応
+    const fcont = row.querySelector('.fcont'); // 両方のクラスに対応
     const fcomment = row.querySelector('.fcomment');
 
     if (fcont && fcomment) {
