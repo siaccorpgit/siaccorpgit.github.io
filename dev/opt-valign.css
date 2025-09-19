@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&family=Yuji+Boku&display=swap');
 td.ftd_title, td.ftd_cont, td.ftd_comment {
     background:white !important;
     border:none;
@@ -22,7 +22,7 @@ td.ftd_title {
     padding:0 !important;
     border-bottom:none !important;
     border-right:none !important;
-    font-family: "Yuji Boku";
+    font-family: "Shippori Antique";
 }
 td.ftd_cont {
     padding:0 !important;
