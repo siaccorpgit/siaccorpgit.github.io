@@ -67,6 +67,10 @@ input.fidText,textarea.fidTextArea,.fidMasterImport,.fidDate,select.fidSelect {
     min-height:30px;
 }
 
+.fcomment {
+    font-family: "Noto Sans JP,Meiryo";
+    padding-left:5px;
+}
 
 /* ラジオボタンを非表示にしてカスタムスタイルを適用 */
 input[type="radio"] {
