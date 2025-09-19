@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
   addTemplateInformationClass();
   addRowTablesClass();
   moveFcommentIfCssLoaded();
-  applyTitleToPlaceholder(); // ← 追加した関数
+  applyTitleToPlaceholder();
+  applyNoMarginTopIfUserStampExists();
 });
 
 // 1. 指定ラベルが揃ったときに直前の tr にクラスを追加
