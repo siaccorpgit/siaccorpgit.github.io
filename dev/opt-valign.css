@@ -155,6 +155,6 @@ input[type="checkbox"]:checked + label {
   font-size: 1.2em;
 }
 
-.no_title {
+td.ftd_cont.no_title {
     padding-top:30px !important;
 }
