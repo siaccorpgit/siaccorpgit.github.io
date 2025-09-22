@@ -80,5 +80,5 @@ td.ftd_cont[title="check"] + td.ftd_comment {
 }
 
 .fidAttachView {
-    min-width:10vw;
+    width:100% !important;
 }
