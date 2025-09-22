@@ -56,12 +56,13 @@ function moveFcommentIfCssLoaded() {
     const fcommentTd = fcomment.closest('td');
     if (!fcommentTd) return;
 
-    // 兄弟tdを取得
-    const siblingTds = Array.from(fcommentTd.parentNode.children).filter(td => td !== fcommentTd);
+    // 兄弟の.ftd_contを取得
+    const siblingFtdConts = Array.from(fcommentTd.parentNode.children)
+      .filter(td => td !== fcommentTd && td.classList.contains('ftd_cont'));
 
-    // 兄弟tdの中で.fcontまたは.fcont_dspを持つものを探す
+    // 兄弟.ftd_contの中の.fcontまたは.fcont_dspを探す
     let targetFcont = null;
-    for (const td of siblingTds) {
+    for (const td of siblingFtdConts) {
       targetFcont = td.querySelector('.fcont, .fcont_dsp');
       if (targetFcont) break;
     }
@@ -72,6 +73,7 @@ function moveFcommentIfCssLoaded() {
     }
   });
 }
+
 
 
 
