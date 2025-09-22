@@ -41,6 +41,7 @@ function addRowTablesClass() {
 
 // 3. opt-valign.css が読み込まれている場合のみ、fcomment を fcont の後ろに移動
 function moveFcommentIfCssLoaded() {
+  // opt-valign.cssが読み込まれているか判定
   const isCssLoaded = Array.from(document.styleSheets).some(sheet => {
     try {
       return sheet.href && sheet.href.includes('https://siaccorpgit.github.io/dev/opt-valign.css');
@@ -48,20 +49,34 @@ function moveFcommentIfCssLoaded() {
       return false;
     }
   });
-
   if (!isCssLoaded) return;
 
+  // すべてのtrを走査
   document.querySelectorAll('tr').forEach(row => {
-    const fcont = row.querySelector('.fcont'); // 両方のクラスに対応
-    const fcomment = row.querySelector('.fcomment');
+    // .fcontまたは.fcont_dspを取得
+    const fcont = row.querySelector('.fcont, .fcont_dsp');
+    if (!fcont) return;
 
-    if (fcont && fcomment) {
-      const newFcomment = fcomment.cloneNode(true);
-      fcont.parentNode.insertBefore(newFcomment, fcont.nextSibling);
-      fcomment.parentNode.removeChild(fcomment);
+    // fcontの親tdを取得
+    const fcontTd = fcont.closest('td');
+    if (!fcontTd) return;
+
+    // 同じtr内で、fcontTd以外のtd内にある.fcommentを探す
+    let fcomment = null;
+    row.querySelectorAll('td').forEach(td => {
+      if (td !== fcontTd) {
+        const candidate = td.querySelector('.fcomment');
+        if (candidate && !fcomment) fcomment = candidate;
+      }
+    });
+
+    if (fcomment) {
+      // fcommentをfcontの直後に移動
+      fcont.parentNode.insertBefore(fcomment, fcont.nextSibling);
     }
   });
 }
+
 
 
 // 4. td.ftd_cont または td.ftd_verticalcont の title を input/textarea の placeholder に設定
