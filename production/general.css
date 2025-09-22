@@ -34,7 +34,10 @@ td.ftd_title {
     border-right:solid 1px #aaa;
     height:30px;
 }
-td.ftd_title,td.ftd_cont,td.ftd_comment,td.ftd_labelcont {
+td.ftd_title,td.ftd_comment,td.ftd_labelcont {
+    padding:10px 10px !important;
+}
+td.ftd_cont {
     padding:10px 10px !important;
 }
 td.ftd_comment {
