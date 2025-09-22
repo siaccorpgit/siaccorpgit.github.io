@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   applyTitleToPlaceholder();
   applyNoMarginTopIfUserStampExists();
   convertFcommentToLabelIfStructureMatches();
+  addNoTitleClassToNoTitlePattern()
 });
 
 // 1. 指定ラベルが揃ったときに直前の tr にクラスを追加
@@ -140,6 +141,24 @@ function convertFcommentToLabelIfStructureMatches() {
         // 元のfcommentを削除
         fcomment.remove();
       }
+    }
+  });
+}
+// 6.タイトルなし行のクラス付与
+function addNoTitleClassToNoTitlePattern() {
+  document.querySelectorAll('.ftd_cont').forEach(td => {
+    // .fcontと.fcommentが両方ともこのtd内にあるか
+    const fcont = td.querySelector('.fcont, .fcont_dsp');
+    const fcomment = td.querySelector('.fcomment');
+    if (!fcont || !fcomment) return;
+
+    // 兄弟tdに.ftd_titleが存在するか
+    const siblings = Array.from(td.parentNode.children).filter(sib => sib !== td);
+    const hasTitle = siblings.some(sib => sib.classList.contains('ftd_title'));
+
+    // 兄弟に.ftd_titleがなければno_titleを付与
+    if (!hasTitle) {
+      td.classList.add('no_title');
     }
   });
 }
