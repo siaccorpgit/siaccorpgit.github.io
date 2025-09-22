@@ -157,7 +157,7 @@ function addNoTitleClassToNoTitlePattern() {
     const hasTitle = siblings.some(sib => sib.querySelector('.ftd_title'));
 
     // 兄弟に.ftd_titleがなければno_titleを付与
-    if (!hasTitle) {
+    if (hasTitle) {
       td.classList.add('no_title');
     }
   });
