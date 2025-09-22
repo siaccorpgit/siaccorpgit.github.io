@@ -57,13 +57,16 @@ function moveFcommentIfCssLoaded() {
     const fcommentTd = fcomment.closest('td');
     if (!fcommentTd) return;
 
-    // 兄弟の.ftd_contを取得
-    const siblingFtdConts = Array.from(fcommentTd.parentNode.children)
-      .filter(td => td !== fcommentTd && td.classList.contains('ftd_cont'));
+    // 兄弟の.ftd_contまたは.ftd_verticalcontを取得
+    const siblingFtds = Array.from(fcommentTd.parentNode.children)
+      .filter(td =>
+        td !== fcommentTd &&
+        (td.classList.contains('ftd_cont') || td.classList.contains('ftd_verticalcont'))
+      );
 
-    // 兄弟.ftd_contの中の.fcontまたは.fcont_dspを探す
+    // 兄弟の中の.fcontまたは.fcont_dspを探す
     let targetFcont = null;
-    for (const td of siblingFtdConts) {
+    for (const td of siblingFtds) {
       targetFcont = td.querySelector('.fcont, .fcont_dsp');
       if (targetFcont) break;
     }
@@ -74,6 +77,7 @@ function moveFcommentIfCssLoaded() {
     }
   });
 }
+
 
 
 
