@@ -34,12 +34,13 @@ td.ftd_comment {
 input.fidText,.fidMasterImport,.fidDate {
     height:30px;
 }
+
 .fidDate {
     width:10vw !important;
 }
-input.fidText,textarea.fidTextArea{
+/* input.fidText,textarea.fidTextArea{
     
-}
+} */
 input.fidText,textarea.fidTextArea,.fidMasterImport,.fidDate,select.fidSelect {
     min-width: 200px;
     border-radius: 10px 10px;
@@ -152,4 +153,8 @@ input[type="checkbox"]:checked + label::after {
 /* チェックされたときのラベル文字サイズ変更 */
 input[type="checkbox"]:checked + label {
   font-size: 1.2em;
+}
+
+.no_title {
+    padding-top:30px !important;
 }
