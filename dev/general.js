@@ -51,31 +51,28 @@ function moveFcommentIfCssLoaded() {
   });
   if (!isCssLoaded) return;
 
-  // すべてのtrを走査
-  document.querySelectorAll('tr').forEach(row => {
-    // .fcontまたは.fcont_dspを取得
-    const fcont = row.querySelector('.fcont, .fcont_dsp');
-    if (!fcont) return;
+  // すべての.fcommentを走査
+  document.querySelectorAll('.fcomment').forEach(fcomment => {
+    const fcommentTd = fcomment.closest('td');
+    if (!fcommentTd) return;
 
-    // fcontの親tdを取得
-    const fcontTd = fcont.closest('td');
-    if (!fcontTd) return;
+    // 兄弟tdを取得
+    const siblingTds = Array.from(fcommentTd.parentNode.children).filter(td => td !== fcommentTd);
 
-    // 同じtr内で、fcontTd以外のtd内にある.fcommentを探す
-    let fcomment = null;
-    row.querySelectorAll('td').forEach(td => {
-      if (td !== fcontTd) {
-        const candidate = td.querySelector('.fcomment');
-        if (candidate && !fcomment) fcomment = candidate;
-      }
-    });
+    // 兄弟tdの中で.fcontまたは.fcont_dspを持つものを探す
+    let targetFcont = null;
+    for (const td of siblingTds) {
+      targetFcont = td.querySelector('.fcont, .fcont_dsp');
+      if (targetFcont) break;
+    }
 
-    if (fcomment) {
-      // fcommentをfcontの直後に移動
-      fcont.parentNode.insertBefore(fcomment, fcont.nextSibling);
+    // 見つかったら、その直後にfcommentを移動
+    if (targetFcont) {
+      targetFcont.parentNode.insertBefore(fcomment, targetFcont.nextSibling);
     }
   });
 }
+
 
 
 
