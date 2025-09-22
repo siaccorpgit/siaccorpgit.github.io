@@ -152,9 +152,9 @@ function addNoTitleClassToNoTitlePattern() {
     const fcomment = td.querySelector('.fcomment');
     if (!fcont || !fcomment) return;
 
-    // 兄弟tdに.ftd_titleが存在するか
+    // 兄弟tdに.ftd_titleが存在するか（入れ子tableも含めて判定）
     const siblings = Array.from(td.parentNode.children).filter(sib => sib !== td);
-    const hasTitle = siblings.some(sib => sib.classList.contains('ftd_title'));
+    const hasTitle = siblings.some(sib => sib.querySelector('.ftd_title'));
 
     // 兄弟に.ftd_titleがなければno_titleを付与
     if (!hasTitle) {
@@ -162,3 +162,4 @@ function addNoTitleClassToNoTitlePattern() {
     }
   });
 }
+
