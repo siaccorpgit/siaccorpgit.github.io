@@ -60,7 +60,7 @@ input.fidText,textarea.fidTextArea,.fidMasterImport,.fidDate,select.fidSelect {
 .row-tables {
     margin-top:25px;
 }
-.fcont {
+.fcont,.fcont_dsp {
     min-width:280px;
     min-height:30px;
 }
