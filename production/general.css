@@ -83,6 +83,6 @@ td.ftd_cont[title="check"] + td.ftd_comment {
     width:100% !important;
 }
 
-.attachmentFilePreviewLink:has(div.fcont_dsp) {
+div.fcont_dsp:has(.attachmentFilePreviewLink) {
     width:100% !important;
 }
