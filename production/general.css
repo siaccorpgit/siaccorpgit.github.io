@@ -72,9 +72,6 @@ select.fidSelect {
 /* td.ftd_cont[title="check"] {
     
 } */
-td.ftd_cont[title="check"] div.fcont {
-    width:20px !important;
-}
 td.ftd_cont[title="check"] + td.ftd_comment {
     vertical-align: middle;
 }
